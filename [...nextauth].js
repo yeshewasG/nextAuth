@@ -5,8 +5,8 @@ export default NextAuth({
   providers: [
     CredentialProvider({
       async authorize(credentials) {
-        //const baseUrl = process.env.MAGENTO_URL;
-        const response = await fetch('http://34.244.209.123:10001/api/v1/user-management/user-login',
+        //const baseUrl = process.env.BASE_URL;
+        const response = await fetch(baseUrl,
           {
             method: "POST",
             body: JSON.stringify(credentials),
